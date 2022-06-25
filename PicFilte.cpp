@@ -561,7 +561,7 @@ void __fastcall TPicFilterDlg::AutoBtnClick(TObject *Sender)
 			Hind[Y]++;
 			RY = 0.7 * R - 0.59 * G - 0.11 * B;
 			BY = -0.3 * R - 0.59 * G + 0.89 * B;
-			Y = sqrt(RY*RY + BY*BY);
+			Y = sqrt((long double)RY*RY + (long double)BY*BY);
 			if( Y > S ) S = Y;
 		}
 		MultProcA();

@@ -2283,7 +2283,7 @@ void __fastcall TMmsstv::UpdateTitle(void)
 		strcat(bf, bbf);
 	}
 	if( sys.m_BitPixel < 24 ){
-		sprintf(bbf, " [%u colors]", int(pow(2, sys.m_BitPixel)));
+		sprintf(bbf, " [%u colors]", int(pow((double)2, sys.m_BitPixel)));
 		strcat(bf, bbf);
 	}
 	if( sys.m_bCQ100 ){
@@ -2350,7 +2350,7 @@ void __fastcall TMmsstv::FormPaint(TObject *Sender)
 		}
 		if( pSound != NULL ){
 			pDem->OpenCloseRxBuff();
-			pSound->Resume();
+			pSound->Start();
 		}
 		sprintf(bf, "%sCurrent.bmp", StockDir);
 		if( IsFile(bf) ){

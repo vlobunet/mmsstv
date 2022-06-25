@@ -632,7 +632,7 @@ void __fastcall TPicRectDlg::PBoxMouseUp(TObject *Sender,
 		if( m_RotFlag ){
 			m_RotX2 = X + SBH->Position;
 			m_RotY2 = Y + SBV->Position;
-            RotPic(-atan2(m_RotY2 - m_RotY1, m_RotX2 - m_RotX1) * 180.0 / PI);
+            RotPic(-atan2((long double)(m_RotY2 - m_RotY1), (long double)(m_RotX2 - m_RotX1)) * 180.0 / PI);
         }
 		else if( (ABS(m_X1-m_X2)<4) || (ABS(m_Y1-m_Y2)<4)  ){
 			m_X2 = m_X1 + m_CW;
